@@ -132,7 +132,7 @@ public class StartUITest {
         Item item1 = tracker.add(new Item("First item"));
         Item item2 = tracker.add(new Item("Second item"));
         Input in = new StubInput(
-                new String[] {"0", "1", "1"}
+                new String[] {"0", String.valueOf(item1.getId()), "1"}
         );
         Output output = new StubOutput();
         UserAction[] actions = {
