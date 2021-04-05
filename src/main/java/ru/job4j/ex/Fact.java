@@ -7,7 +7,7 @@ public class Fact {
 
     public static int calc(int n) {
         if (n < 0) {
-            throw new IllegalArgumentException("N должно быть больше нуля");
+            throw new IllegalArgumentException("N должно быть больше или равно нулю");
         }
         int rsl = 1;
         for (int index = 1; index <= n; index++) {
