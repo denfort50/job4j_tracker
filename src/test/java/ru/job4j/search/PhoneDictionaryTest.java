@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.is;
 
@@ -40,13 +39,5 @@ public class PhoneDictionaryTest {
         phones.add(new Person("Petr", "Arsentev", "534872", "Bryansk"));
         ArrayList<Person> persons = phones.find("Bryansk");
         assertThat(persons.get(0).getSurname(), is("Arsentev"));
-    }
-
-    @Test
-    public void whenFindNothing() {
-        PhoneDictionary phones = new PhoneDictionary();
-        phones.add(new Person("Petr", "Arsentev", "534872", "Bryansk"));
-        ArrayList<Person> persons = phones.find("Moscow");
-        assertTrue(persons.isEmpty());
     }
 }
