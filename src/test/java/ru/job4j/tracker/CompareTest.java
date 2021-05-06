@@ -18,7 +18,8 @@ public class CompareTest {
         items.add(item1);
         items.add(item2);
         items.add(item3);
-        Collections.sort(items);
+        AscItemComparator ascItemComparator = new AscItemComparator();
+        items.sort(ascItemComparator);
         assertThat(items.get(0).getName(), is("a"));
         assertThat(items.get(1).getName(), is("b"));
         assertThat(items.get(2).getName(), is("c"));
