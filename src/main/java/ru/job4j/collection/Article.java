@@ -7,7 +7,7 @@ import java.util.Set;
 public class Article {
     public static boolean generateBy(String origin, String line) {
         boolean result = true;
-        String[] wordsOfOrigin = origin.replaceAll("[,.!:;]", "").split(" ");
+        String[] wordsOfOrigin = origin.replaceAll("\\p{P}", "").split(" ");
         String[] wordsOfLine = line.split(" ");
         Set<String> uniqueOfOrigin = new HashSet<>();
         Collections.addAll(uniqueOfOrigin, wordsOfOrigin);
