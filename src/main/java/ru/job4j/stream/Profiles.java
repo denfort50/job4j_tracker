@@ -1,5 +1,6 @@
 package ru.job4j.stream;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,5 +10,10 @@ public class Profiles {
         return profiles.stream()
                 .map(Profile::getAddress)
                 .collect(Collectors.toList());
+    }
+
+    public static List<Address> sortAndDistinct(List<Address> addresses) {
+        Comparator<Address> ascByCity = Comparator.comparing(Address::getCity);
+        return addresses.stream().sorted(ascByCity).distinct().collect(Collectors.toList());
     }
 }
