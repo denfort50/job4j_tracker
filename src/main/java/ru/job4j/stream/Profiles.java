@@ -13,7 +13,9 @@ public class Profiles {
     }
 
     public static List<Address> sortAndDistinct(List<Address> addresses) {
-        Comparator<Address> ascByCity = Comparator.comparing(Address::getCity);
-        return addresses.stream().sorted(ascByCity).distinct().collect(Collectors.toList());
+        return addresses.stream()
+                .sorted(Comparator.comparing(Address::getCity))
+                .distinct()
+                .collect(Collectors.toList());
     }
 }

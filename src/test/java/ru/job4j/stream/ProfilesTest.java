@@ -24,5 +24,4 @@ public class ProfilesTest {
         List<Address> result = Profiles.sortAndDistinct(Profiles.collect(profiles));
         assertThat(result, is(expect));
     }
-
 }
