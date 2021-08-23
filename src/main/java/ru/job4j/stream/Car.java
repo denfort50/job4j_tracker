@@ -104,21 +104,21 @@ public class Car {
             car.sportCar = sportCar;
             return car;
         }
+    }
 
-        public static void main(String[] args) {
-            Car car = new Builder().buildBrand("Toyota")
-                    .buildModel("Supra")
-                    .buildColor("Yellow")
-                    .buildYear(2005)
-                    .buildVolume(3499)
-                    .buildHp(550)
-                    .buildMaxSpeed(335)
-                    .buildVin(6487951235849561324L)
-                    .buildPrice(100000)
-                    .buildSportCar(true)
-                    .build();
-            System.out.println(car);
-        }
+    public static void main(String[] args) {
+        Car car = new Builder().buildBrand("Toyota")
+                .buildModel("Supra")
+                .buildColor("Yellow")
+                .buildYear(2005)
+                .buildVolume(3499)
+                .buildHp(550)
+                .buildMaxSpeed(335)
+                .buildVin(6487951235849561324L)
+                .buildPrice(100000)
+                .buildSportCar(true)
+                .build();
+        System.out.println(car);
     }
 }
 
